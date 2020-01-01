@@ -1,0 +1,95 @@
+@import url("reset.css");
+
+* {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #618d8a;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #ebca88;
+}
+
+nav > a {
+    display: block;
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #333;
+}
+
+aside {
+    width: 30%;
+    height: 500px;
+    float: left;
+    background-color: #9eaf8c;
+}
+
+article {
+    width: 70%;
+    height: 500px;
+    float: left;
+    background-color: #eca378;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    height: 100%;
+    line-height: 150px;
+    text-align: center;
+    color: #fff;
+    background-color: #e46d69;
+}
+
+/* @media可以寫簡潔，不需要重複上面原css，因為有一樣的css重複，可以顯示Media Queries的切換 */
+/* 改變你的版型和寬高百分比的設置跟高度的切換，跟是不是要用float等之類的方式來做 */
+@media screen and (min-width:415px) and (max-width: 1024px) {
+    nav {
+        height: auto;
+        overflow: hidden;
+    }
+    
+    nav > a {
+        width: 50%;
+        height: 60px;
+    }
+    
+    aside {
+        float: right;
+    }
+}
+
+@media screen and (max-width:414px) {
+    nav {
+        height: auto;
+        overflow: hidden;
+    }
+    
+    nav > a {
+        width: 50%;
+        height: 60px;
+    }
+    
+    aside {
+        width: 100%;
+        height: 80px;
+        float: none;
+    }
+
+    article {
+        width: 100%;
+        height: 500px;
+        float: none;
+    }
+}
